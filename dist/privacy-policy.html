@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LAVG</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        <header class="header " data-header data-popup="add-right-padding">
+    <div class="container">
+        <div class="header__body">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.png" alt="">
+                </a>
+            </div>
+            <nav class="header__menu menu" data-menu >
+                <ul class="menu__list">
+                    <li>
+                        <a class="menu__link" href="#">Услуги</a>
+                    </li>
+                    <li>
+                        <a class="menu__link" href="#">Seo</a>
+                    </li>
+                    <li class="current-menu-item">
+                        <a class="menu__link" href="#">Директ</a>
+                    </li>
+                    <li>
+                        <a class="menu__link" href="#">Портфолио</a>
+                    </li>
+                    <li>
+                        <a class="menu__link" href="#">Обо мне</a>
+                    </li>
+                    <li>
+                        <a class="menu__link" href="#">Партнеры</a>
+                    </li>
+                    <li>
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger burger" data-action="open-menu">
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page home-page">
+            <div class="header-size-pedding"></div>
+
+            <section class="text-section padding-wrap">
+                <div class="container">
+                    <div class="text-content text-md last">
+                        <h3>Пользовательское соглашение</h3>
+                        <p>
+                            Пользователь — посетитель сети Интернет, включая сайт Компании www.lavg.ru.
+                            Персональные данные — любая информация, которую Пользователь самостоятельно предоставляет
+                            Компании путем заполнения Заявок с использованием форм обратной связи на сайте Компании или
+                            иным путем в процессе использования сайта <a href="#">www.lavg.ru.</a>
+                        </p>
+                        <p>
+                            Политика конфиденциальности — настоящая Политика конфиденциальности, включая
+                            Пользовательское соглашение.
+                        </p>
+                        <p>
+                            1. Политика конфиденциальности представляет собой правила использования Компанией
+                            Персональных данных пользователей сети Интернет (далее — Пользователь), возникающие при
+                            использовании сайта www.lavg.ru, включая, но, не ограничиваясь, заполнением Заявок с
+                            использованием формы обратной связи (звонок сотрудника Компании или письмо, составленное
+                            сотрудником Компании на адрес электронной почты Пользователя) и прочие действия по
+                            использованию сайта <a href="#">www.lavg.ru.</a>
+                        </p>
+                        <p>
+                            2. Пользовательское соглашение является неотъемлемой частью Политики конфиденциальности,
+                            заключаемого между Компанией и Пользователем в процессе использования сайта Компании.
+                        </p>
+                        <p>
+                            3. Заключая Пользовательское соглашение Пользователь своей волей и в своем интересе дает
+                            согласие на обработку, в том числе на сбор, систематизацию, накопление, хранение,
+                            (уточнение, обновление, изменение), использование, передачу третьим лицам, обезличивание,
+                            блокирование, уничтожение, в т.ч. с использованием средств автоматизации или без
+                            использования таких средств, своих Персональных данных, которые в зависимости от цели (форма
+                            обратной связи в виде Заявки на обратный звонок от сотрудника Компании, письменное сообщение
+                            от сотрудника Компании на адрес электронной почты Пользователя и т.п.) включают, но не
+                            ограничиваются следующими Персональными данными: фамилия, имя, отчество, номер контактного
+                            телефона, адрес электронной почты Компании, с целью предоставления Пользователю услуг.
+                        </p>
+                        <p>
+                            4. Компания осуществляет обработку Персональных данных Пользователя в соответствии с
+                            требованиями Федерального закона от 27.07.2006 N 152-ФЗ «О персональных данных» и только в
+                            том объеме, который необходим Компании для оказания услуг Пользователю.
+                        </p>
+                        <p>
+                            5. Пользователь согласен с тем, что согласие, данное Пользователем в электронной форме на
+                            сайте www.lavg.ru. является согласием, полностью отвечающем требованиям законодательства о
+                            Персональных данных и позволяющим подтвердить факт его получения Компанией.
+                        </p>
+                        <p>
+                            6. Компания не осуществляет проверку достоверности предоставляемых Персональных данных,
+                            полагая, что Пользователь действует добросовестно, осмотрительно и прилагает все необходимые
+                            усилия к поддержанию таких данных в актуальном состоянии.
+                        </p>
+                        <p>
+                            7. Настоящее Пользовательское соглашение вступает в силу с момента начала использования
+                            Пользователем сайта Компании и действует бессрочно.
+                        </p>
+                        <p>
+                            8. Субъект персональных данных вправе отозвать свое согласие на обработку своих Персональных
+                            данных, письменно уведомив об этом Компания по адресу alex@lavg.ru.
+                        </p>
+                        <p>
+                            9. Компания защищает личную информацию Пользователя, принимая соответствующие меры
+                            безопасности против потери, кражи, несанкционированного доступа, раскрытия, копирования и
+                            изменения информации со стороны третьих лиц.
+                        </p>
+                        <p>
+                            10. Сайт Компании использует файлы cookie и похожие технологии, чтобы гарантировать
+                            максимальное удобство Пользователю, предоставляя персонализированную информацию. При
+                            использовании сайта www.lavg.ru Пользователь подтверждает свое согласие на использование
+                            файлов cookie в соответствии с настоящим уведомлением в отношении данного типа файлов. Если
+                            Пользователь не согласен с тем, что Компания использует данный тип файлов, то Пользователь
+                            должен соответствующим образом изменить настройки своего браузера.
+                        </p>
+                        <p>
+                            11. Политика конфиденциальности может быть изменена Компанией в любое время в одностороннем
+                            порядке без какого-либо специального уведомления об этом Пользователя. Регулярное
+                            ознакомление с действующей редакцией Политики конфиденциальности является обязанностью
+                            Пользователя.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- == FOOTER ================== -->
+        <footer class="footer padding-wrap pb-0">
+    <div class="footer__inner">
+        <div class="container">
+            <div class="footer__body">
+                <ul class="footer__nav">
+                    <li>
+                        <a href="#">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="#">Seo</a>
+                    </li>
+                    <li>
+                        <a href="#">Директ</a>
+                    </li>
+                    <li>
+                        <a href="#">Портфолио</a>
+                    </li>
+                    <li>
+                        <a href="#">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="#">Партнеры</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- == // FOOTER ================== -->
+
+        <div class="popup " id="popup-form">
+    <div class="popup__body">
+        <div class="popup__content">
+            <div class="popup__close" data-popup="close-popup"><span></span></div>
+            <h3 class="popup__title title-3">Оставить заявку</h3>
+            <div class="form">
+                <div class="form__fields">
+                    <div class="form__field">
+                        <input type="text" class="input" placeholder="Имя">
+                    </div>
+                    <div class="form__field" data-mask="+7 (999) 999-99-99">
+                        <input type="text" class="input" placeholder="Телефон">
+                    </div>
+                    <div class="form__field">
+                        <input type="email" class="input" placeholder="E-mail">
+                    </div>
+                    <div class="form__field">
+                        <input type="text" class="input" placeholder="Сайт">
+                    </div>
+                </div>
+                <div class="form__checkbox-radio-wrap">
+                    <label class="checkbox-radio">
+                        <input type="checkbox" checked>
+                        <div class="checkbox-radio__square"></div>
+                        <div class="checkbox-radio__text">
+                            Согласен(а) с <a href="#">пользовательским соглашением</a>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="form__submit btn mb-0"><span>Отправить</span></button>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+        <div class="popup" id="popup-message">
+    <div class="popup__body">
+        <div class="popup__content">
+            <div class="popup__close" data-popup="close-popup"><span></span></div>
+            <h3 class="popup__title title-3 mb-3">Заявка отправлена</h3>
+            <div class="popup__text text-content text-center">
+                Менеджер свяжется с Вами <br> в ближайшее время
+            </div>
+		</div>
+	</div>
+</div>
+        <!-- 
+			чтобы показать popup-message нужно вызвать в коде глобальный метод window.popup.open('#popup-message') 
+			так же есть метод window.popup.close('#popup-message')
+		-->
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script> -->
+</body>
+
+</html>

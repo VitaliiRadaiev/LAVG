@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "LAVG"
+})
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper" style="background-image: url('img/photo/main-bg.png');">
+		@@include('common/header/_header.html',{
+		"mod": ""
+		})
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page home-page">
+			<div class="header-size-pedding"></div>
+
+			<section class="promo-header padding-wrap pt-0">
+				<div class="promo-header__bg">
+					<img src="img/photo/promo-header-bg.png" alt="">
+				</div>
+				<div class="promo-header__body container">
+					<div class="promo-header__row">
+						<form action="/">
+							<div class="promo-header__form form">
+								<h1 class="promo-header__form-title title-2">
+									<span class="text-gradient">Закажи</span> бесплатный аудит сайта
+								</h1>
+								<div class="form__fields">
+									<div class="form__field">
+										<input type="text" class="input" placeholder="Имя">
+									</div>
+									<div class="form__field" data-mask="+7 (999) 999-99-99">
+										<input type="text" class="input" placeholder="Телефон">
+									</div>
+									<div class="form__field">
+										<input type="text" class="input" placeholder="Сайт">
+									</div>
+								</div>
+								<div class="form__checkbox-radio-wrap">
+									<label class="checkbox-radio">
+										<input type="checkbox" checked>
+										<div class="checkbox-radio__square"></div>
+										<div class="checkbox-radio__text">
+											Согласен(а) с <a href="#">пользовательским соглашением</a>
+										</div>
+									</label>
+								</div>
+
+								<button type="submit" class="form__submit btn"><span>Заказать</span></button>
+							</div>
+						</form>
+					</div>
+					<div class="promo-header__bg-title">
+						MARKETING
+					</div>
+					<div class="promo-header__row">
+						<ul class="services-list">
+							<li>
+								<div class="services-list__icon">
+									<img src="img/photo/services-list-icon-1.svg" alt="">
+								</div>
+								<div class="services-list__text">
+									SEO Оптимизация
+								</div>
+							</li>
+							<li>
+								<div class="services-list__icon">
+									<img src="img/photo/services-list-icon-2.svg" alt="">
+								</div>
+								<div class="services-list__text">
+									Яндекс Директ
+								</div>
+							</li>
+							<li>
+								<div class="services-list__icon">
+									<img src="img/photo/services-list-icon-3.svg" alt="">
+								</div>
+								<div class="services-list__text">
+									Программирование
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="seo-rates padding-wrap">
+				<div class="container">
+					<h2 class="seo-rates__title title-2">Тарифы SEO</h2>
+					<div class="seo-rates__body">
+						<div class="mobile-carousel swiper" data-mobile="false" data-slider="mobile-carousel">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="card">
+										<h4 class="card__title title-4">Яндекс+Google START</h4>
+										<ul class="card__list">
+											<li>Продвигаемые запросы - <strong>500</strong></li>
+											<li>Структура сайта до <strong>100 разделов</strong></li>
+											<li>Копирайтинг <strong>20000 символов</strong></li>
+											<li>Техническая поддержка сайта</li>
+											<li>Юзабилити сайта</li>
+											<li>Ссылочная масса</li>
+										</ul>
+										<div class="card__dashed-line"></div>
+										<div class="card__price text-gradient">
+											65 000 ₽
+										</div>
+										<a href="#popup-form" class="card__btn btn btn--second" data-popup="open-popup"><span>Заказать</span></a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<h4 class="card__title title-4">
+											Яндекс+Google PRO
+										</h4>
+										<ul class="card__list">
+											<li>Продвигаемые запросы - 1000</li>
+											<li>Структура сайта до 300 разделов</li>
+											<li>Копирайтинг 25000 символов</li>
+											<li>Техническая поддержка сайта</li>
+											<li>Юзабилити сайта</li>
+											<li>Ссылочная масса</li>
+											<li>Работа с поведенческим фактором</li>
+										</ul>
+										<div class="card__dashed-line"></div>
+										<div class="card__price text-gradient">
+											85 000 ₽
+										</div>
+										<a href="#popup-form" class="card__btn btn btn--second" data-popup="open-popup"><span>Заказать</span></a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<h4 class="card__title title-4">По всей России</h4>
+										<ul class="card__list">
+											<li>Продвигаемые запросы - <strong>1000</strong></li>
+											<li>Структура сайта до <strong>300 разделов</strong></li>
+											<li>Копирайтинг <strong>25000 символов</strong></li>
+											<li>Техническая поддержка сайта</li>
+											<li>Юзабилити сайта</li>
+											<li>Ссылочная масса</li>
+											<li>Работа с поведенческим фактором</li>
+											<li>Еженедельный аудит</li>
+											<li>Ежемесячный отчет</li>
+											<li>Работа с отзывами</li>
+										</ul>
+										<div class="card__dashed-line"></div>
+										<div class="card__price text-gradient">
+											120 000 ₽
+										</div>
+										<a href="#popup-form" class="card__btn btn btn--second" data-popup="open-popup"><span>Заказать</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="info-box padding-wrap">
+				<div class="container">
+					<div class="info-box__body">
+						<h2 class="info-box__title title-2">
+							Ведение контекстной рекламной компании всего <span class="text-gradient">15 000₽ в
+								месяц</span>
+						</h2>
+						<div class="info-box__text text-content">
+							Какие задачи помогает решить настройка Яндекс Директ под ключ?
+						</div>
+						<ul class="info-box__list">
+							<li>
+								<div class="info-box__list-icon">
+									<img src="img/photo/info-box-list-icon-1.svg" alt="">
+								</div>
+								<div class="info-box__list-text">
+									Помогаем разобраться, почему бюджет сливается, а заявок нет
+								</div>
+							</li>
+							<li>
+								<div class="info-box__list-icon">
+									<img src="img/photo/info-box-list-icon-2.svg" alt="">
+								</div>
+								<div class="info-box__list-text">
+									Снижаем стоимость заявки
+									с контекстной рекламы
+								</div>
+							</li>
+							<li>
+								<div class="info-box__list-icon">
+									<img src="img/photo/info-box-list-icon-3.svg" alt="">
+								</div>
+								<div class="info-box__list-text">
+									Помогаем получить первые
+									заказы через 1-3 дня
+								</div>
+							</li>
+							<li>
+								<div class="info-box__list-icon">
+									<img src="img/photo/info-box-list-icon-4.svg" alt="">
+								</div>
+								<div class="info-box__list-text">
+									Нужно сделать много заявок
+									по очень низкой цене
+								</div>
+							</li>
+							<li>
+								<div class="info-box__list-icon">
+									<img src="img/photo/info-box-list-icon-5.svg" alt="">
+								</div>
+								<div class="info-box__list-text">
+									Увеличиваем количество заявок и звонков
+								</div>
+							</li>
+							<li>
+								<div class="info-box__list-icon">
+									<img src="img/photo/info-box-list-icon-6.svg" alt="">
+								</div>
+								<div class="info-box__list-text">
+									Не устраивает работа текущего исполнителя, нужны гарантии
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			@@include('common/cta/_cta.html')
+
+			<section class="services-options padding-wrap">
+				<div class="container">
+					<h2 class="services-options__title title-2">
+						Какие виды рекламных объявлений и параметров РК мы используем
+					</h2>
+					<ul class="services-options__list">
+						<li>
+							<div class="services-options__list-head">
+								<div class="services-options__list-icon">
+									<img src="img/photo/services-options-img-1.png" alt="">
+								</div>
+								<div class="services-options__list-title">
+									Определение целевой аудитории
+								</div>
+							</div>
+							<div class="services-options__list-content text-content">
+								<ul>
+									<li>Возраст и пол</li>
+									<li>Тип устройства пользователя</li>
+									<li>Интересы</li>
+									<li>ГЕО расположение</li>
+									<li>Образование</li>
+									<li>Работа</li>
+									<li>Инвентарь</li>
+									<li>В зависимости от погодных условий</li>
+									<li>Видеодополнения</li>
+									<li>Краткосрочные интересы</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="services-options__list-head">
+								<div class="services-options__list-icon">
+									<img src="img/photo/services-options-img-2.png" alt="">
+								</div>
+								<div class="services-options__list-title">
+									Контекстная реклама
+								</div>
+							</div>
+							<div class="services-options__list-content text-content">
+								<ul>
+									<li>Реклама на поисковой сети Яндекса</li>
+									<li>Реклама на РСЯ (рекламная сеть Яндекса)</li>
+									<li>Баннер на поиске</li>
+									<li>Реклама мобильных приложений</li>
+									<li>Динамические объявления</li>
+									<li>Смарт-баннеры</li>
+									<li>Графические объявления</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="services-options__list-head">
+								<div class="services-options__list-icon">
+									<img src="img/photo/services-options-img-3.png" alt="">
+								</div>
+								<div class="services-options__list-title">Имиджевая реклама</div>
+							</div>
+							<div class="services-options__list-content text-content">
+								<ul>
+									<li>Кампании с фиксированным CPM</li>
+									<li>Видеореклама</li>
+									<li>Аудиореклама</li>
+									<li>Баннерная реклама</li>
+									<li>Медийный баннер на главной</li>
+									<li>Социальная реклама</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="services-options__list-head">
+								<div class="services-options__list-icon">
+									<img src="img/photo/services-options-img-4.png" alt="">
+								</div>
+								<div class="services-options__list-title">ГЕО</div>
+							</div>
+							<div class="services-options__list-content text-content">
+								<ul>
+									<li>Стандартный таргетинг по городу или региону</li>
+									<li>Локационный таргетинг</li>
+									<li>Автотаргетинг</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="services-options__list-head">
+								<div class="services-options__list-icon">
+									<img src="img/photo/services-options-img-5.png" alt="">
+								</div>
+								<div class="services-options__list-title">Другие площадки</div>
+							</div>
+							<div class="services-options__list-content text-content">
+								<ul>
+									<li>Яндекс.Маркет</li>
+									<li>Яндекс.Справочника</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="services-options__list-head">
+								<div class="services-options__list-icon">
+									<img src="img/photo/services-options-img-6.png" alt="">
+								</div>
+								<div class="services-options__list-title">
+									Автоматические сегменты
+								</div>
+							</div>
+							<div class="services-options__list-content text-content">
+								<ul>
+									<li>По целям в метрике</li>
+									<li>Сегменты в метрике</li>
+									<li>Сегменты Яндекс.Аудиторий</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="advertising-rates padding-wrap">
+				<div class="container">
+					<h2 class="advertising-rates__title title-2">
+						Выберите подходящий тариф под свои потребности
+					</h2>
+					<div class="advertising-rates__body">
+						<div class="mobile-carousel swiper" data-mobile="false" data-slider="mobile-carousel">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="card card--second">
+										<div class="card__icon">
+											<img src="img/photo/card-icon-1.svg" alt="">
+										</div>
+										<h5 class="card__title title-5">
+											Оптимальный
+										</h5>
+										<div class="card__price text-gradient">
+											от 45000 ₽
+										</div>
+										<div class="card__content">
+											<div class="hidden-list text-content" data-hidden-list>
+												<ul>
+													<li>Подбор семантического ядра</li>
+													<li>Неограниченное количество запросов (1 запрос = 1 объявление)</li>
+													<li>До 12 направлений</li>
+													<li>Рекламные кампании на ПОИСКЕ</li>
+													<li>Кампания на сетях (РСЯ)</li>
+													<li>А/В тестирование</li>
+													<li>3 варианта объявлений</li>
+													<li>Сплит - тестирование</li>
+													<li>Технология Look-alike</li>
+													<li>Создание быстрых ссылок</li>
+													<li>Создание уточнений</li>
+													<li>Установка utm-меток</li>
+													<li>Яндекс Визитка</li>
+													<li>Брендированная видеореклама</li>
+													<li>Объявления для мобильных</li>
+													<li>Графические объявления</li>
+													<li>Подбор изображений</li>
+													<li>Настройка счётчиков аналитики</li>
+													<li>Ретаргетинг</li>
+													<li>Настройка целей Я.Директ</li>
+													<li>Баннер на поиске</li>
+													<li>Динамические объявления</li>
+													<li>Смарт-баннеры</li>
+													<li>Запуск 2-3 дня</li>
+													<li>Разработка продающих объявлений</li>
+													<li>Рекомендации по повышению конверсии</li>
+													<li>Работа с CTR</li>
+													<li>Редактирование ставок</li>
+													<li>Еженедельные отчеты</li>
+													<li>Контроль рекламных позиций</li>
+													<li>Яндекс аудитории</li>
+													<li>Аналитика эффективности РК</li>
+													<li>Подбор и проработка стратегии</li>
+												</ul>
+
+												<button class="hidden-list__toggle-btn" data-text="Закрыть список">
+													Показать полный список
+												</button>
+											</div>
+										</div>
+
+										<a href="#popup-form" class="card__btn btn" data-popup="open-popup"><span>Заказать</span></a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card card--second">
+										<div class="card__icon">
+											<img src="img/photo/card-icon-2.svg" alt="">
+										</div>
+										<h5 class="card__title title-5">
+											Рассширенный
+										</h5>
+										<div class="card__price text-gradient">
+											от 85000 ₽
+										</div>
+										<div class="card__content">
+											<div class="hidden-list text-content" data-hidden-list>
+												<ul>
+													<li>Подбор семантического ядра</li>
+													<li>Неограниченное количество запросов (1 запрос = 1 объявление)</li>
+													<li>До 6 направлений</li>
+													<li>Рекламные кампании на ПОИСКЕ</li>
+													<li>Кампания на сетях (РСЯ)</li>
+													<li>А/В тестирование</li>
+													<li>2 варианта объявлений</li>
+													<li>Создание быстрых ссылок</li>
+													<li>Создание уточнений</li>
+													<li>Установка utm-меток</li>
+													<li>Яндекс Визитка</li>
+													<li>Объявления для мобильных</li>
+													<li>Графические объявления</li>
+													<li>Подбор изображений</li>
+													<li>Настройка счётчиков аналитики</li>
+													<li>Ретаргетинг</li>
+													<li>Настройка целей в Я.Директ</li>
+													<li>Баннер на поиске</li>
+													<li>Динамические объявления</li>
+													<li>Смарт-баннеры</li>
+													<li>Запуск 1-2 дня</li>
+													<li>Разработка продающих объявлений</li>
+													<li>Рекомендации по повышению конверсии</li>
+													<li>Работа с CTR</li>
+													<li>Редактирование ставок</li>
+													<li>Еженедельные отчеты</li>
+													<li>Контроль рекламных позиций</li>
+													<li>Яндекс аудитории</li>
+													<li>Аналитика эффективности РК</li>
+													<li>Подбор и проработка стратегии</li>
+												</ul>
+
+												<button class="hidden-list__toggle-btn" data-text="Закрыть список">
+													Показать полный список
+												</button>
+											</div>
+										</div>
+
+										<a href="#popup-form" class="card__btn btn" data-popup="open-popup"><span>Заказать</span></a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card card--second">
+										<div class="card__icon">
+											<img src="img/photo/card-icon-3.svg" alt="">
+										</div>
+										<h5 class="card__title title-5">
+											Максимальный
+										</h5>
+										<div class="card__price text-gradient">
+											от 120000 ₽
+										</div>
+										<div class="card__content">
+											<div class="hidden-list text-content" data-hidden-list>
+												<ul>
+													<li>Подбор семантического ядра</li>
+													<li>Подбор поисковых запросов</li>
+													<li>(1 запрос = 1 объявление)</li>
+													<li>(Конкуренты + Wordstat + Поисковые подсказки)</li>
+													<li>Максимальное количество объявлений под максимальное число запросов Вашей потенциальной аудитории</li>
+													<li>Неограниченное количество направлений</li>
+													<li>До 100 рекламных кампаний</li>
+													<li>(Поиск + РСЯ)</li>
+													<li>А/В тестирование</li>
+													<li>Объявления для мобильных</li>
+													<li>Графические объявления</li>
+													<li>3 варианта объявлений</li>
+													<li>Маркетинговый аудит</li>
+													<li>Смарт-баннеры</li>
+													<li>Ретаргетинг</li>
+													<li>Баннер на поиске</li>
+													<li>Анализ конкурентов и составление УТП</li>
+													<li>Рекомендации по сайту</li>
+													<li>Динамические объявления</li>
+													<li>Создание быстрых ссылок</li>
+													<li>Создание уточнений</li>
+													<li>Установка utm-меток</li>
+													<li>Разработка продающих объявлений</li>
+													<li>Рекомендации по повышению конверсии</li>
+													<li>Работа с CTR</li>
+													<li>Редактирование ставок</li>
+													<li>Еженедельные отчеты</li>
+													<li>Контроль рекламных позиций</li>
+													<li>Яндекс аудитории</li>
+													<li>Аналитика эффективности РК</li>
+													<li>Подбор и проработка стратегии</li>
+												</ul>
+
+												<button class="hidden-list__toggle-btn" data-text="Закрыть список">
+													Показать полный список
+												</button>
+											</div>
+										</div>
+
+										<a href="#popup-form" class="card__btn btn" data-popup="open-popup"><span>Заказать</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="portfolio padding-wrap">
+				<div class="container">
+					<h2 class="portfolio__title title-1">
+						Наши кейсы
+					</h2>
+					<div class="portfolio__subtitle text-lg">
+						собственные методы, которые работают безотказно
+					</div>
+					<div class="portfolio__slider-wrap" data-slider="portfolio-slider">
+						<div class="portfolio__slider">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="portfolio-item">
+											<div class="portfolio-item__head">
+												<div class="portfolio-item__logo">
+													<a href="#">
+														<img src="img/photo/portfolio-logo.png" alt="">
+													</a>
+												</div>
+												<h2 class="portfolio-item__title title-2">Nayada Glass Technology</h2>
+											</div>
+											<div class="portfolio-item__body">
+												<div class="portfolio-item__text-wrap text-content">
+													<h5>ДО</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+
+													<h5>ПОСЛЕ</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+												</div>
+												<div class="portfolio-item__slider-wrap" data-slider="portfolio-item-slider">
+													<div class="swiper">
+														<div class="swiper-wrapper"> 
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-2.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-2.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="portfolio-item__btn btn-prev">
+														<img src="img/icons/chevron-left.svg" alt="">
+													</div>
+													<div class="portfolio-item__btn btn-next">
+														<img src="img/icons/chevron-right.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="portfolio-item">
+											<div class="portfolio-item__head">
+												<div class="portfolio-item__logo">
+													<a href="#">
+														<img src="img/photo/portfolio-logo.png" alt="">
+													</a>
+												</div>
+												<h2 class="portfolio-item__title title-2">Nayada Glass Technology</h2>
+											</div>
+											<div class="portfolio-item__body">
+												<div class="portfolio-item__text-wrap text-content">
+													<h5>ДО</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+
+													<h5>ПОСЛЕ</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+												</div>
+												<div class="portfolio-item__slider-wrap" data-slider="portfolio-item-slider">
+													<div class="swiper">
+														<div class="swiper-wrapper"> 
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-2.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-2.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="portfolio-item__btn btn-prev">
+														<img src="img/icons/chevron-left.svg" alt="">
+													</div>
+													<div class="portfolio-item__btn btn-next">
+														<img src="img/icons/chevron-right.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="portfolio-item">
+											<div class="portfolio-item__head">
+												<div class="portfolio-item__logo">
+													<a href="#">
+														<img src="img/photo/portfolio-logo.png" alt="">
+													</a>
+												</div>
+												<h2 class="portfolio-item__title title-2">Nayada Glass Technology</h2>
+											</div>
+											<div class="portfolio-item__body">
+												<div class="portfolio-item__text-wrap text-content">
+													<h5>ДО</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+
+													<h5>ПОСЛЕ</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+												</div>
+												<div class="portfolio-item__slider-wrap" data-slider="portfolio-item-slider">
+													<div class="swiper">
+														<div class="swiper-wrapper"> 
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-2.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-2.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="portfolio-item__btn btn-prev">
+														<img src="img/icons/chevron-left.svg" alt="">
+													</div>
+													<div class="portfolio-item__btn btn-next">
+														<img src="img/icons/chevron-right.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="portfolio-item">
+											<div class="portfolio-item__head">
+												<div class="portfolio-item__logo">
+													<a href="#">
+														<img src="img/photo/portfolio-logo.png" alt="">
+													</a>
+												</div>
+												<h2 class="portfolio-item__title title-2">Nayada Glass Technology</h2>
+											</div>
+											<div class="portfolio-item__body">
+												<div class="portfolio-item__text-wrap text-content">
+													<h5>ДО</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+
+													<h5>ПОСЛЕ</h5>
+													<p>
+														Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь приюту для животных
+													</p>
+												</div>
+												<div class="portfolio-item__slider-wrap" data-slider="portfolio-item-slider">
+													<div class="swiper">
+														<div class="swiper-wrapper"> 
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-2.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-2.jpg" alt="">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<a href="img/photo/portfolio-item-img-1.jpg" data-fancybox>
+																	<img src="img/photo/portfolio-item-img-1.jpg" alt="">
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="portfolio-item__btn btn-prev">
+														<img src="img/icons/chevron-left.svg" alt="">
+													</div>
+													<div class="portfolio-item__btn btn-next">
+														<img src="img/icons/chevron-right.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio__slider-btn btn-prev">
+								<img src="img/icons/chevron-left-color.svg" alt="">
+							</div>
+							<div class="portfolio__slider-btn btn-next">
+								<img src="img/icons/chevron-right-color.svg" alt="">
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about padding-wrap">
+				<div class="container">
+					<div class="about__body">
+						<div class="about__text text-content text-lg">
+							<h2>Обо мне</h2>
+							<p>
+								Я являюсь специалистом в области маркетинга. Более 150 успешных проектов за 12 лет работы в разных отраслях. Колоссальное количество кейсов в моей голове, помогают принимать правильные решения в бизнесе, которые приводят к увеличению прибыли! Будьте уверены, что я погружаюсь в Ваш проект на 100% и готов гарантировать увеличение выручки с другими важными ключевыми показателями эффективности!
+							</p>
+						</div>
+						<div class="about__img">
+							<img src="img/photo/owner.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="logos padding-wrap">
+				<div class="container">
+					<ul class="logos__list">
+						<li>
+							<img src="img/photo/logo-1.png" alt="">
+						</li>
+						<li>
+							<img src="img/photo/logo-2.png" alt="">
+						</li>
+						<li>
+							<img src="img/photo/logo-3.png" alt="">
+						</li>
+						<li>
+							<img src="img/photo/logo-4.png" alt="">
+						</li>
+						<li>
+							<img src="img/photo/logo-5.png" alt="">
+						</li>
+						<li>
+							<img src="img/photo/logo-6.png" alt="">
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			@@include('common/cta/_cta.html')
+
+			<section class="contact padding-wrap">
+				<div class="container">
+					<h2 class="contact__title title-2">Контактный телефон для связи</h2>
+					<a href="#" class="contact__phone">
+						+7 (917) 500-98-04
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		@@include('common/footer/_footer.html',{})
+		<!-- == // FOOTER ================== -->
+
+		@@include('common/popup/_popup-form.html')
+		@@include('common/popup/_popup-message.html')
+		<!-- 
+			чтобы показать popup-message нужно вызвать в коде глобальный метод window.popup.open('#popup-message') 
+			так же есть метод window.popup.close('#popup-message')
+		-->
+	</div>
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>

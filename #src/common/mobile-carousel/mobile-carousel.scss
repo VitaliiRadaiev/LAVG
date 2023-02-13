@@ -1,0 +1,25 @@
+.mobile-carousel {
+    &.swiper {
+        overflow: visible;
+    }
+
+    & .swiper-wrapper {
+        @media (min-width: 768px) {
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+    }
+
+    & .swiper-slide {
+        height: auto;
+
+        @media (min-width: 992px) {
+            flex: 0 1 calc(33.333333% - (1.5rem * 2 / 3));
+        }
+
+        @media (min-width: 768px) {
+            flex: 0 1 calc(50% - (1.5rem / 2));
+        }
+    }
+}

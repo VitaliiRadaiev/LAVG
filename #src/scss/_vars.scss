@@ -1,0 +1,50 @@
+
+
+//<ШРИФТЫ>===========================================================================================================
+$mainFontFamily:  'Montserrat', sans-serif;
+//</ШРИФТЫ>===========================================================================================================
+
+//<РАЗМЕРЫ КОНТЕЙНЕРА>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: 1267.98;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</РАЗМЕРЫ КОНТЕЙНЕРА>===========================================================================================================
+
+$textColor: #333333;
+$textColorSecondary: #FFFFFF;
+$hover: #E97425;
+$mainColor: #EB235F;
+$secondHover: #73DBFE;
+$secondColor: #E0F1FF;
+$mainGradient: linear-gradient(136.99deg, #EB235F -15.41%, #E8950D 126.73%);
+$secondGradient: linear-gradient(140.1deg, #73DBFE -9.87%, #54B4F4 94.66%);
+$dangerColor:  #FF4444;
+$successColor:#00C367;
+$infoColor: #BC62EF;
+$lightColor: #fff;
+$warningColor: #FFC31C;
+
+
+
+:root {
+    --bs-primary: #222222;
+    --bs-secondary: #037847;
+    --bs-success: #00C367;
+    --bs-info: #BC62EF;
+    --bs-warning: #FFC31C;
+    --bs-danger: #FF4444;
+    --bs-light: #fff;
+    --bs-dark: #000;
+
+    --bs-primary-rgb: 34, 34, 34;
+    --bs-secondary-rgb: 3, 120, 71;
+    --bs-success-rgb: 0, 195, 103;
+    --bs-info-rgb: 188, 98, 239;
+    --bs-warning-rgb: 255, 195, 28;
+    --bs-danger-rgb: 255, 68, 68;
+    --bs-light-rgb: 255, 255, 255;
+    --bs-dark-rgb: 0, 0, 0;
+}

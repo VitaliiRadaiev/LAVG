@@ -1,0 +1,105 @@
+.btn {
+    display: inline-flex;
+    min-height: 5.6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1.4rem;
+    outline: none;
+    cursor: pointer;
+    background-color: $hover;
+    position: relative;
+    padding: 1.2rem 4.2rem;
+    min-width: 21.6rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.07em;
+    color: #ffffff !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    @media (max-width: $md3+px) {
+        width: 100%;
+        min-height: 3.9rem;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        transition: all 0.3s ease;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: $mainGradient;
+        z-index: 1;
+    }
+
+    & span {
+        position: relative;
+        z-index: 3;
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    &--second {
+        &:not(:hover) {
+            & span {
+                @extend .text-gradient;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            & span {
+                background: linear-gradient(136.99deg, #EB235F -15.41%, #E8950D 126.73%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+
+
+        &::before {
+            background: linear-gradient(white, white) padding-box,
+                linear-gradient(136.99deg, #eb235f -15.41%, #e8950d 126.73%) border-box;
+            border-radius: 1.3rem;
+            border: 1px solid transparent;
+
+            @media (max-width: $md3+px) {
+                border-radius: 0.9rem;
+            }
+        }
+    }
+
+    &--third {
+        background-color: transparent;
+        border: 2px solid #fff;
+
+        &::before {
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: #fff;
+    
+                & span {
+                    background: linear-gradient(136.99deg, #EB235F -15.41%, #E8950D 126.73%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}
