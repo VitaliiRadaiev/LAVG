@@ -46,7 +46,6 @@
     }
 
     &__menu {
-
     }
 
     &__burger {
@@ -67,10 +66,14 @@
         padding: 2rem 32px;
         overflow-y: auto;
         overflow-x: hidden;
-        transition: transform .4s ease;
+        transition: transform 0.4s ease;
 
         &--open {
             transform: translateX(-100%);
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -87,13 +90,13 @@
 
         @media (max-width: $md2+px) {
             display: block;
+            margin-bottom: 5rem;
         }
 
         & > li {
-
             @media (max-width: $md2+px) {
                 &:not(:last-child) {
-                    margin-bottom: 1.6rem;
+                    margin-bottom: 3.4rem;
                 }
             }
 
@@ -113,6 +116,16 @@
         font-size: 2rem;
         line-height: 2.4rem;
         font-weight: 500;
+    }
+
+    &__phone {
+        @media (min-width: 992px) {
+            display: none;
+        }
+
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
     }
 }
 

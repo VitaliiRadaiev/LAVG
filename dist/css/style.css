@@ -3176,6 +3176,12 @@ strong {
   font-weight: 500;
 }
 
+.menu__phone {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
 .burger {
   width: 28px;
   height: 22px;
@@ -4304,6 +4310,10 @@ strong {
   max-height: 126%;
 }
 
+.services-options__list > li:nth-child(4) .services-options__list-icon img {
+  max-height: 110%;
+}
+
 .services-options__list-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4421,7 +4431,7 @@ strong {
 }
 
 .contact__phone {
-  font-size: min(12.8rem, 9.5vw);
+  font-size: min(12.8rem, 8.8vw);
   line-height: 1.218em;
 }
 
@@ -4481,6 +4491,10 @@ strong {
   }
 
   .header__burger {
+    display: none;
+  }
+
+  .menu__phone {
     display: none;
   }
 
@@ -4632,12 +4646,17 @@ strong {
             transform: translateX(-100%);
   }
 
+  .menu > *:last-child {
+    margin-bottom: 0;
+  }
+
   .menu__list {
     display: block;
+    margin-bottom: 5rem;
   }
 
   .menu__list > li:not(:last-child) {
-    margin-bottom: 1.6rem;
+    margin-bottom: 3.4rem;
   }
 
   .btn--second span {
@@ -4685,7 +4704,7 @@ strong {
 
   h1,
   .title-1 {
-    font-size: 4.8rem;
+    font-size: 3.6rem;
   }
 
   h2,
@@ -4722,7 +4741,7 @@ strong {
   }
 
   .padding-wrap {
-    padding: 2rem 0;
+    padding: 2.3rem 0;
   }
 
   .header-size-pedding {
@@ -5032,7 +5051,12 @@ strong {
   }
 
   .services-options__title {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+
+  .services-options__list {
+    padding: 0 2rem;
   }
 
   .services-options__list > li {
@@ -5041,9 +5065,26 @@ strong {
             flex: 0 1 100%;
   }
 
+  .services-options__list-head {
+    gap: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
   .services-options__list-icon {
     width: 9rem;
     height: 9rem;
+  }
+
+  .services-options__list-title {
+    font-size: 2rem;
+  }
+
+  .services-options__list-content {
+    padding: 0 1.8rem;
+  }
+
+  .advertising-rates__title {
+    text-align: left;
   }
 
   .about__body {
@@ -5051,7 +5092,12 @@ strong {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 4rem;
+    gap: 2.4rem;
+  }
+
+  .about__text.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.6em;
   }
 
   .logos__list {
@@ -5063,11 +5109,13 @@ strong {
         -ms-flex: 0 1 calc(50% - 3rem);
             flex: 0 1 calc(50% - 3rem);
   }
-}
 
-@media (max-width: 767.98px) and (max-width: 767.98px) {
-  .services-options__list-title {
-    font-size: 1.8rem;
+  .contact__title.title-2 {
+    font-size: 2.4rem;
+  }
+
+  .contact__phone {
+    font-weight: 600;
   }
 }
 
