@@ -28,6 +28,7 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             min-height: 7.6rem;
+            gap: 2.4rem;
         }
     }
 
@@ -46,6 +47,25 @@
     }
 
     &__menu {
+    }
+
+    &__phone {
+        @media (min-width: 992px) {
+            display: none;
+        }
+
+        flex: 0 0 auto;
+        height: 27px;
+        width: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        
+        & img, & svg {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__burger {

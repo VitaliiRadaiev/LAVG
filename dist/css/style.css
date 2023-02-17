@@ -3149,6 +3149,30 @@ strong {
   height: auto;
 }
 
+.header__phone {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 27px;
+  width: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.header__phone img,
+.header__phone svg {
+  width: 100%;
+  height: auto;
+}
+
 .menu__list {
   padding-left: 0;
   margin-bottom: 0;
@@ -4490,6 +4514,10 @@ strong {
     color: #EB235F;
   }
 
+  .header__phone {
+    display: none;
+  }
+
   .header__burger {
     display: none;
   }
@@ -4794,6 +4822,7 @@ strong {
     padding-top: 1rem;
     padding-bottom: 1rem;
     min-height: 7.6rem;
+    gap: 2.4rem;
   }
 
   .header__logo {
