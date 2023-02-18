@@ -240,6 +240,7 @@ class App {
 	componentsBeforeLoad() {
 		@@include('../common/promo-header/promo-header.js');
 		@@include('../common/hidden-list/hidden-list.js');
+		@@include('../common/growup-btn/growup-btn.js');
 	}
 
 	componentsAfterLoad() {

@@ -4116,6 +4116,37 @@ strong {
   background-color: #AAAAAA;
 }
 
+.btn-growup {
+  background-color: transparent;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  width: 8rem;
+  cursor: pointer;
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  z-index: 50;
+  padding: 0;
+  -webkit-transition: opacity 0.6s ease, color 0.3s ease;
+  -o-transition: opacity 0.6s ease, color 0.3s ease;
+  transition: opacity 0.6s ease, color 0.3s ease;
+  color: #333333;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn-growup svg {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.btn-growup--show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .promo-header {
   position: relative;
 }
@@ -4569,6 +4600,10 @@ strong {
 
   .popup__close:hover {
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-growup {
+    display: none !important;
   }
 }
 
@@ -5026,6 +5061,12 @@ strong {
 
   .popup__content {
     padding: 4rem 2rem;
+  }
+
+  .btn-growup {
+    right: 24px;
+    bottom: 20px;
+    width: 80px;
   }
 
   .promo-header__bg {
