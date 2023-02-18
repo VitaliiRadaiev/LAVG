@@ -4134,6 +4134,7 @@ strong {
   color: #333333;
   opacity: 0;
   visibility: hidden;
+  z-index: 47;
 }
 
 .btn-growup svg {

@@ -14,6 +14,7 @@
     color: $textColor;
     opacity: 0;
     visibility: hidden;
+    z-index: 47;
 
     @media (min-width: 992px) {
         display: none !important;
