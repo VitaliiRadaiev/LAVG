@@ -212,4 +212,44 @@ class Utils {
 	}
 }
 
+function initToggleClassesByClick() {
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('[data-action="remove-classes-by-click"]')) {
+            const actionEl = e.target.closest('[data-action="remove-classes-by-click"]');
+
+            let targetSelectors = actionEl.getAttribute('data-target').split(',').map(c => c.trim());
+            const classes = actionEl.getAttribute('data-classes').split(',').map(c => c.trim());
+
+            if (/_self/.test(targetSelectors)) {
+                targetSelectors = targetSelectors.filter(c => c !== '_self');
+                actionEl?.classList.remove(...classes);
+            };
+
+            if (!targetSelectors.length) return;
+            const targetElements = document.querySelectorAll(targetSelectors);
+            targetElements.forEach(targetEl => {
+                targetEl?.classList.remove(...classes);
+            })
+        }
+
+        if (e.target.closest('[data-action="add-classes-by-click"]')) {
+            const actionEl = e.target.closest('[data-action="add-classes-by-click"]');
+
+            let targetSelectors = actionEl.getAttribute('data-target').split(',').map(c => c.trim());
+            const classes = actionEl.getAttribute('data-classes').split(',').map(c => c.trim());
+
+            if (/_self/.test(targetSelectors)) {
+                targetSelectors = targetSelectors.filter(c => c !== '_self');
+                actionEl?.classList.add(...classes);
+            };
+
+            if (!targetSelectors.length) return;
+            const targetElements = document.querySelectorAll(targetSelectors);
+            targetElements.forEach(targetEl => {
+                targetEl?.classList.add(...classes);
+            })
+        }
+    })
+}
+
 

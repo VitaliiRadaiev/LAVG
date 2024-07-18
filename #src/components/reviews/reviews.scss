@@ -1,0 +1,226 @@
+.stars {
+    display: flex;
+    font-size: inherit;
+    color: gold;
+    gap: 0.2em;
+    cursor: pointer;
+
+    &:not([data-stars="clickable"]) {
+        pointer-events: none;
+    }
+
+    & input {
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &__item {
+        position: relative;
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        & svg {
+            display: block;
+            height: 1em;
+            width: auto;
+        }
+    }
+
+    &__item-outline-icon {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__item-solid-icon {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 0;
+    }
+}
+
+.reviews {
+    overflow: hidden;
+
+    & .swiper {
+        overflow: visible;
+        position: relative;
+        padding-bottom: 4.6rem;
+
+        @media (min-width: $mq-lg) {
+            overflow: hidden;
+            padding-bottom: 5.8rem;
+        }
+    }
+
+    & .swiper-wrapper {
+    }
+
+    & .swiper-slide {
+        @media (min-width: $mq-md) {
+            height: auto;
+        }
+    }
+
+    & .swiper-pagination  {
+        position: absolute;
+        bottom: 0rem;
+        left: 0;
+        width: 100%;
+
+        & .swiper-pagination-bullet {
+            margin: 0 0.5rem !important;
+        }
+    }
+
+    &__title {
+
+        @media (min-width: $mq-md) {
+            text-align: center;
+        }
+    }
+
+    &__inner {
+        margin-top: 3.2rem;
+
+        @media (min-width: $mq-lg) {
+            position: relative;
+            padding-left: 11.6rem;
+            padding-right: 11.6rem;
+            margin-top: 4.2rem;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @media (min-width: $mq-lg) {
+            position: absolute;
+            top: calc(50% - 2.9rem);
+            transform: translateY(-50%);
+            height: 6.4rem;
+            width: 6.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            & img {
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            &.swiper-button-disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+            
+            &.swiper-button-lock {
+                display: none;
+            }
+        }
+
+        &.btn-left {
+            left: 2rem;
+        }
+        &.btn-right {
+            right: 2rem;
+        }
+    }
+}
+
+
+.review-card {
+    height: 100%;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--gray-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--black);
+
+    &__stars {
+        font-size: 2rem;
+    }
+
+    &__title {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin-top: 1.2rem;
+        font-size: 1.6rem;
+        line-height: 1.42em;
+        margin-bottom: 2rem;
+    }
+
+    &__show-more-btn {
+        margin-bottom: 2rem;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--black);
+        padding: 0;
+        text-align: start;
+        position: relative;
+        align-self: start;
+        padding-right: calc(0.35em + 1.4rem);
+
+        &:after {
+            position: absolute;
+            top: calc(50% - 0.2em);
+            right: 0;
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-left: 0.35em solid transparent;
+            border-right: 0.35em solid transparent;
+            border-top: 0.35em solid currentColor;
+        }
+    }
+
+    &__author {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    &__author-image {
+        flex: 0 0 auto;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 100%;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
+    &__author-name {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}
+
+.swiper-pagination {
+}
+.btn-left {
+}
+.btn-right {
+}

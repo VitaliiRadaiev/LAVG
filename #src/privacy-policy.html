@@ -8,7 +8,7 @@
     <div class="_preload-body"></div>
     <!-- == TOP LINE ================== -->
     <div class="main-wrapper">
-        @@include('common/header/_header.html',{
+        @@include('components/header/_header.html',{
         "mod": ""
         })
         <!-- == // TOP LINE ================== -->
@@ -102,11 +102,11 @@
         </main>
 
         <!-- == FOOTER ================== -->
-        @@include('common/footer/_footer.html',{})
+        @@include('components/footer/_footer.html',{})
         <!-- == // FOOTER ================== -->
 
-        @@include('common/popup/_popup-form.html')
-        @@include('common/popup/_popup-message.html')
+        @@include('components/popup/_popup-form.html')
+        @@include('components/popup/_popup-message.html')
         <!-- 
 			чтобы показать popup-message нужно вызвать в коде глобальный метод window.popup.open('#popup-message') 
 			так же есть метод window.popup.close('#popup-message')

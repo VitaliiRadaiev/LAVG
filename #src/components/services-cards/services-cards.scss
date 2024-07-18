@@ -1,0 +1,96 @@
+.services-cards {
+    &__list {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: grid;
+        gap: 1.6rem;
+
+        @media (min-width: $mq-lg) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.services-card {
+    overflow: hidden;
+    border-radius: 2rem;
+    padding: 1px;
+    margin: -1px;
+    position: relative;
+
+    @media (min-width: $mq-lg) {
+        height: 100%;
+    }
+
+
+    &__inner {
+        background: linear-gradient(137deg, #eb235f 0%, #e8950d 100%);
+        border-radius: 2rem;
+        min-height: 34.8rem;
+        padding: 2.4rem;
+
+        @media (min-width: $mq-lg) {
+            min-height: 26rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        color: white;
+        margin-bottom: 2.8rem;
+
+        @media (min-width: $mq-lg) {
+            max-width: 52.6rem;
+        }
+    }
+
+    &__btn {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+
+    &__price {
+        position: absolute;
+        right: -3.4rem;
+        bottom: -13.5rem;
+        background-color: #fff;
+        border-radius: 100%;
+        height: 27rem;
+        width: 27rem;
+        padding-top: 3.8rem;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $mq-lg) {
+            height: 33.2rem;
+            width: 33.2rem;
+            right: -3.4rem;
+            bottom: -15.9rem;
+            padding-top: 6.5rem;
+        }
+    }
+
+    &__price-count {
+        font-weight: 700;
+        font-size: 4.8rem;
+        line-height: 1.08em;
+
+        @media (min-width: $mq-lg) {
+            font-size: 5.3rem;
+        }
+    }
+
+    &__price-time {
+        color: var(--gray);
+        margin-top: -0.2em;
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 1.17em;
+
+        @media (min-width: $mq-lg) {
+            font-size: 3.2rem;
+        }
+    }
+}

@@ -1,32 +1,24 @@
-let { src, dest } = require("gulp");
-let fs = require('fs');
-let gulp = require("gulp");
-let browsersync = require("browser-sync").create();
-let autoprefixer = require("gulp-autoprefixer");
-let scss = require('gulp-sass')(require('sass'));
-let group_media = require("gulp-group-css-media-queries");
-let plumber = require("gulp-plumber");
-let del = require("del");
-//let imagemin = require("gulp-imagemin");
-let uglify = require("gulp-uglify-es").default;
-let rename = require("gulp-rename");
-let fileinclude = require("gulp-file-include");
-let clean_css = require("gulp-clean-css");
-let newer = require('gulp-newer');
+const { src, dest } = require("gulp");
+const fs = require('fs');
+const gulp = require("gulp");
+const browsersync = require("browser-sync").create();
+const fileinclude = require("gulp-file-include");
+const del = require("del");
 
-//let webp = require('imagemin-webp');
-let webpcss = require("gulp-webp-css");
-let webphtml = require('gulp-webp-html');
+const autoprefixer = require("gulp-autoprefixer");
+const scss = require('gulp-sass')(require('sass'));
+const group_media = require("gulp-group-css-media-queries");
+const rename = require("gulp-rename");
+const clean_css = require("gulp-clean-css");
 
-let fonter = require('gulp-fonter');
+const uglify = require("gulp-uglify-es").default;
+const newer = require('gulp-newer');
+const plumber = require("gulp-plumber");
 
-let ttf2woff = require('gulp-ttf2woff');
-let ttf2woff2 = require('gulp-ttf2woff2');
+const project_name = "dist";
+const src_folder = "#src";
 
-let project_name = "dist";
-let src_folder = "#src";
-
-let path = {
+const path = {
 	build: {
 		html: project_name + "/",
 		js: project_name + "/js/",
@@ -35,24 +27,26 @@ let path = {
 		fonts: project_name + "/fonts/"
 	},
 	src: {
-		favicon: src_folder + "/img/favicon.{jpg,png,svg,gif,ico,webp}",
 		html: [src_folder + "/*.html", "!" + src_folder + "/_*.html"],
-		js: [src_folder + "/js/app.js", src_folder + "/js/vendors.js", src_folder + "/js/jQueryScripts.js"],
+		js: [src_folder + "/js/app.js", src_folder + "/js/vendors.js"],
 		css: src_folder + "/scss/style.scss",
-		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
-		fonts: src_folder + "/fonts/*.ttf"
+		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,mp4}", "!**/favicon.*"],
+		fonts: src_folder + "/fonts/*.{ttf,woff,woff2,eot,svg}"
 	},
 	watch: {
-		html: src_folder + "/**/*.html",
+		html: src_folder + "/**/**/*.html",
 		js: src_folder + "/**/**/*.js",
-		css: src_folder + "/scss/**/*.scss",
-		images: src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-		blockCss: src_folder + "/common/**/**/*.scss",
-		blockJs: src_folder + "/common/**/**/*.js",
-		blockHtml: src_folder + "/common/**/**/*.html",
+		css: src_folder + "/**/**/*.scss",
+		images: src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,mp4}",
+		fonts: src_folder + "/fonts/*.{ttf,woff,woff2,eot,svg}",
 	},
 	clean: "./" + project_name + "/"
 };
+
+function clean() {
+	return del(path.clean);
+}
+
 function browserSync(done) {
 	browsersync.init({
 		server: {
@@ -62,12 +56,14 @@ function browserSync(done) {
 		port: 3000,
 	});
 }
+
 function html() {
 	return src(path.src.html, {})
 		.pipe(fileinclude())
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream());
 }
+
 function css() {
 	return src(path.src.css, {})
 		.pipe(
@@ -83,8 +79,8 @@ function css() {
 				cascade: true
 			})
 		)
-		.pipe(browsersync.stream())
 		.pipe(dest(path.build.css))
+		.pipe(browsersync.stream())
 		.pipe(clean_css())
 		.pipe(
 			rename({
@@ -94,6 +90,7 @@ function css() {
 		.pipe(dest(path.build.css))
 		.pipe(browsersync.stream());
 }
+
 function js() {
 	return src(path.src.js, {})
 		.pipe(fileinclude())
@@ -108,83 +105,19 @@ function js() {
 		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream());
 }
-// function images() {
-// 	return src(path.src.images)
-// 		.pipe(newer(path.build.images))
-// 		.pipe(
-// 			imagemin([
-// 				webp({
-// 					quality: 75
-// 				})
-// 			])
-// 		)
-// 		.pipe(
-// 			rename({
-// 				extname: ".webp"
-// 			})
-// 		)
-// 		.pipe(dest(path.build.images))
-// 		.pipe(src(path.src.images))
-// 		.pipe(newer(path.build.images))
-// 		.pipe(
-// 			imagemin({
-// 				progressive: true,
-// 				svgoPlugins: [{ removeViewBox: false }],
-// 				interlaced: true,
-// 				optimizationLevel: 3 // 0 to 7
-// 			})
-// 		)
-// 		.pipe(dest(path.build.images))
-// }
 
 function images() {
 	return src(path.src.images)
+		.pipe(newer(path.build.images))
 		.pipe(dest(path.build.images))
-		.pipe(browsersync.stream())
 }
-gulp.task('importImg', function () {
-	return src(path.src.images)
-		.pipe(dest(path.build.images))
-		.pipe(browsersync.stream())
-})
 
-gulp.task('ttf2woff', function () {
-	src(path.src.fonts)
-		.pipe(ttf2woff())
-		.pipe(dest(path.build.fonts));
-	return src(path.src.fonts)
-		.pipe(ttf2woff2())
-		.pipe(dest(path.build.fonts));
-})
-
-function favicon() {
-	return src(path.src.favicon)
-		.pipe(plumber())
-		.pipe(
-			rename({
-				extname: ".ico"
-			})
-		)
-		.pipe(dest(path.build.html))
-}
-function fonts_otf() {
-	return src('./' + src_folder + '/fonts/*.otf')
-		.pipe(plumber())
-		.pipe(fonter({
-			formats: ['ttf']
-		}))
-		.pipe(gulp.dest('./' + src_folder + +'/fonts/'));
-}
 function fonts() {
-	src(path.src.fonts)
-		.pipe(plumber())
-		.pipe(ttf2woff())
-		.pipe(dest(path.build.fonts));
 	return src(path.src.fonts)
-		.pipe(ttf2woff2())
-		.pipe(dest(path.build.fonts))
-		.pipe(browsersync.stream());
+		.pipe(plumber())
+		.pipe(dest(path.build.fonts));
 }
+
 function fontstyle() {
 	let file_content = fs.readFileSync(src_folder + '/scss/fonts.scss');
 	if (file_content == '') {
@@ -205,30 +138,25 @@ function fontstyle() {
 	}
 }
 function cb() { }
-function clean() {
-	return del(path.clean);
-}
+
+
 function watchFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.images], images);
-	gulp.watch([path.watch.blockCss], css);
-	gulp.watch([path.watch.blockJs], js);
-	gulp.watch([path.watch.blockHtml], html);
+	gulp.watch([path.watch.fonts], fonts);
 }
-let build = gulp.series(clean, gulp.parallel(html, css, js, images), gulp.parallel(fontstyle));
+let build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts), gulp.parallel(fontstyle));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.clean = clean;
 exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
-//exports.favicon = favicon;
-//exports.fonts_otf = fonts_otf;
-exports.fontstyle = fontstyle;
 exports.fonts = fonts;
-exports.clean = clean;
+exports.fontstyle = fontstyle;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

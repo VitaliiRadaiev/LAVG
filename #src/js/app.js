@@ -33,6 +33,7 @@ class App {
 			this.selectInit();
 			this.spollerInit();
 			this.componentsBeforeLoad();
+			initToggleClassesByClick();
 		});
 		
 
@@ -47,17 +48,18 @@ class App {
 	}
 
 	headerHandler() {
-		@@include('../common/header/header.js');
+		@@include('../components/header/header.js');
 	}
 
 	popupHandler() {
-		@@include('../common/popup/popup.js');
+		@@include('../components/popup/popup.js');
 	}
 
 	slidersInit() {
-		@@include('../common/carousel/carousel.js');
-		@@include('../common/mobile-carousel/mobile-carousel.js');
-		@@include('../common/portfilio/portfilio.js');
+		@@include('../components/carousel/carousel.js');
+		@@include('../components/mobile-carousel/mobile-carousel.js');
+		@@include('../components/portfilio/portfilio.js');
+		@@include('../components/reviews/reviews.js');
 	}
 
 
@@ -217,7 +219,7 @@ class App {
 	}
 
 	selectInit() {
-		@@include('../common/select/select.js');
+		@@include('../components/select/select.js');
 	}
 
 	setFontSize() {
@@ -238,9 +240,10 @@ class App {
 
 
 	componentsBeforeLoad() {
-		@@include('../common/promo-header/promo-header.js');
-		@@include('../common/hidden-list/hidden-list.js');
-		@@include('../common/growup-btn/growup-btn.js');
+		@@include('../components/promo-header/promo-header.js');
+		@@include('../components/hidden-list/hidden-list.js');
+		@@include('../components/growup-btn/growup-btn.js');
+		@@include('../components/benefits/benefits.js');
 	}
 
 	componentsAfterLoad() {

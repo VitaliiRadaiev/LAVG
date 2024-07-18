@@ -11,6 +11,14 @@ $md1: 1267.98;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
+
+$mq-sm: 576px;
+$mq-md: 768px;
+$mq-lg: 1024px;
+$mq-xl: 1280px;
+$mq-xxl: 1536px;
+$mouse-device: "(hover: hover) and (pointer: fine)";
+$touch-device: "(hover: none) and (pointer: coarse)";
 //</РАЗМЕРЫ КОНТЕЙНЕРА>===========================================================================================================
 
 $textColor: #333333;
@@ -47,4 +55,10 @@ $warningColor: #FFC31C;
     --bs-danger-rgb: 255, 68, 68;
     --bs-light-rgb: 255, 255, 255;
     --bs-dark-rgb: 0, 0, 0;
+
+    --gray: #aaa;
+	--gray-2: #b3b3b3;
+	--black: #333;
+	--blue-light: #e0f1ff;
+	--green-light: #dff4bb;
 }

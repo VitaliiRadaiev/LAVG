@@ -1,0 +1,124 @@
+.how-we-work {
+
+    &__inner {
+        position: relative;
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: $md3+px) {
+            text-align: start;
+        }
+    }
+
+    &__list {
+        padding: 0 3rem;
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-auto-flow: column;
+        position: relative;
+        z-index: 2;
+        margin-top: 6.8rem;
+        gap: 5rem 5.5rem;
+
+        @media (max-width: $md3+px) {
+            margin-top: 4rem;
+            display: block;
+            padding: 0;
+
+            & > li {
+                &:not(:first-child) {
+                    margin-top: 3.4rem;
+                }
+            }
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        gap: 1.8rem;
+        padding-left: 3.6rem;
+
+        @media (max-width: $md3+px) {
+            padding-left: 0;
+            gap: 1.6rem;
+            align-items: center;
+        }
+    }
+
+    &__list-item-img {
+        flex: 0 0 auto;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img, & svg {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__list-item-text {
+        font-size: 1.6rem;
+        line-height: 1.64em;
+        font-weight: 600;
+        max-width: 49rem;
+        color: var(--black);
+
+        @media (max-width: $md3+px) {
+            max-width: none;
+        }
+    }
+
+    &__list-img {
+        grid-row: span 3;
+        max-width: 52.3rem;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $md3+px) {
+            max-width: none;
+        }
+
+        & img {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+
+            @media (max-width: $md3+px) {
+                width: 100%;
+
+            }
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        right: 0;
+        bottom: -14rem;
+        z-index: 1;
+
+        & img {
+            width: auto;
+            height: 69.1rem;
+            display: block;
+        }
+    }
+}
+
+.padding-wrap {
+}
+.container {
+}
+.title-2 {
+}
